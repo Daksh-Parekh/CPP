@@ -30,7 +30,7 @@ class Railway_res_sys{
 		}
 		
 		void getData(){
-			cout << number << "\t" << name << "\t  " << source << "\t" << destination << "\t\t" << time << endl;
+			cout << number << "\t" << name << "\t  " << source << "\t\t" << destination << "\t\t" << time << endl;
 		}
 		
         int Search(int num){
@@ -42,7 +42,9 @@ class Railway_res_sys{
                      << " Train time= " << time << endl;  
             }
         }
-	
+		int number(){
+			return number;
+		}
 };
 
 int main(){
@@ -51,7 +53,7 @@ int main(){
 	cout << "Enter the number of records: ";
 	cin  >> n;
 	
-	Railway_res_sys t[n];
+	Railway_res_sys t[n],t;
 	
 	Railway_res_sys::Header();
     
@@ -65,6 +67,7 @@ int main(){
     for(i=0;i<n;i++){
         t[i].Search(num);
     }
-	
+    
+	int cmp=t.number();
 	
 }
