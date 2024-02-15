@@ -12,10 +12,10 @@ class Distance{
 		}
 		Distance operator+(Distance a){
 			Distance tmp;
-			tmp.km=km+tmp.km;
-			tmp.meter=meter+a.meter;
-			tmp.meter/1000;
-			tmp.meter%1000;
+			tmp.km   =km    +a.km;
+			tmp.meter=meter +a.meter;
+			tmp.km   =tmp.km+(tmp.meter/1000);
+			tmp.meter=tmp.meter%1000;
 			
 			return tmp;
 		}
